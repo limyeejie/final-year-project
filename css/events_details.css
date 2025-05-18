@@ -1,0 +1,147 @@
+/* Custom CSS for Event Details Page */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #2f3640;
+}
+
+/* Container for event details */
+.event-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-details-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Image section */
+.event-image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.event-image img {
+    width: 100%;
+    max-width: 500px; /* Fixed image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Information section */
+.event-info-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.event-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #273c75;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-date-location {
+    font-size: 18px;
+    color: #718093;
+    margin-bottom: 15px;
+}
+
+.event-description {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.event-organizer-contact {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0097e6;
+    margin-bottom: 40px;
+}
+
+/* Buttons with smooth animation */
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.go-back-btn,
+.join-now-btn {
+    padding: 12px 35px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.go-back-btn {
+    background-color: transparent;
+    color: #718093;
+    border: 2px solid #718093;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.join-now-btn {
+    background-color: #273c75;
+    color: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.go-back-btn:hover {
+    background-color: #718093;
+    color: #fff;
+}
+
+.join-now-btn:hover {
+    background-color: #192a56;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile-friendly design */
+@media (max-width: 768px) {
+    .event-details-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .event-image-section {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .event-info-section {
+        padding: 0;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

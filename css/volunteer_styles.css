@@ -1,0 +1,427 @@
+/* Apply this to the body or the main container to hide the horizontal scrollbar */
+body {
+    overflow-x: hidden; /* Hides horizontal overflow */
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: black;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Image belt section */
+.image-belt {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Prevents horizontal scrolling */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    padding: 0 10%; /* Adds space on the left and right sides of the container */
+}
+
+.image-belt-left .belt-track {
+    display: flex;
+    animation: bounceImages 5s ease-in-out infinite;
+}
+
+.belt-track img {
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    margin-top: 50px; /* Adds margin to push the image down */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Define bounce animation */
+@keyframes bounceImages {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-30px) scale(1.05); /* Slight scaling effect for 3D illusion */
+    }
+    50% {
+        transform: translateY(0) scale(1);
+    }
+    75% {
+        transform: translateY(30px) scale(1.05);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Add 3D effect on hover */
+.belt-track img:hover {
+    transform: translateY(0) scale(1.1) rotateY(10deg); /* Slight rotation for 3D effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Increased shadow for deeper effect */
+}
+
+/* Hero section */
+.intro {
+    position: relative;
+    height: 400px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #74DCD5;
+}
+
+.intro-volunteer {
+    background: #0b5a5f7b;
+    padding: 60px;
+    width: 90%;
+    border-radius: 10px;
+    max-width: 900px;
+    margin-top: 70px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.intro-title {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.intro-subtext {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* why volunteer section */
+.why-volunteer {
+    height: auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #91AAEA;
+    z-index: 1;
+}
+
+.explain-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: badgeSlide 2s ease-in-out;
+}
+
+.explain {
+    background-color: #a7b9e4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    animation: pulse 2s infinite;
+    width: 250px;
+    margin: 10px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.explain-inner {
+    text-align: center;
+}
+
+.explain-inner img {
+    width: 100px;
+    height: 100px;
+}
+
+.explain h2 {
+    color: #082866;
+}
+
+.description {
+    font-size: 1rem; 
+    font-style: italic; 
+    color: #555; 
+    margin-top: 5px; 
+    word-wrap: break-word; 
+    white-space: normal;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* See Opportunity Section */
+.volunteer-opportunity {
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    background-color: #99EDED;
+}
+
+.volunteer-opportunity h1{
+    padding: 10px 0;
+}
+
+.swiper-wrapper {
+    margin-top: 10px;
+    padding: 0 10px;
+    justify-content: center;
+}
+
+/* Apply to 1st, 4th, 7th, etc. */
+#volunteer-container .swiper-slide:nth-child(4n+1) {
+    background-color: #0B5A5F;
+}
+
+/* Apply to 2nd, 5th, 8th, etc. */
+#volunteer-container .swiper-slide:nth-child(4n+2) {
+    background-color: #082866;
+}
+
+/* Apply to 3rd, 6th, 9th, etc. */
+#volunteer-container .swiper-slide:nth-child(4n+3) {
+    background-color: #29A1D5;
+}
+
+/* Apply to 4th, 8th, 12th, etc. */
+#volunteer-container .swiper-slide:nth-child(4n) {
+    background-color:darkolivegreen;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    height: 400px;
+    /* margin: 0 auto 55px; */
+    margin: 0 55px 55px;
+}
+
+.card-list { 
+    display: flex; 
+    gap: 20px;
+}
+
+.card-list .card-item {
+    max-width: 250px;
+    width: 100%;
+    height: 250px;
+    color: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.card-list .card-item:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+.card-list .card-item h2 {
+    color: #fff;
+    margin: 10px 0;
+}
+
+.card-list .card-item p {
+    font-size: 1rem;
+    color: #e3e3e3;
+    margin: 10px 0;
+}
+
+/* buttons */
+.card-list .card-item .opportunity-btn {
+    padding: 10px 35px;
+    color: #000000;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-list .card-item .opportunity-btn:hover {
+    background-color: #0000005d;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+    background: #fff;
+    height: 12px;
+    width: 12px;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev, .swiper-button-next {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    padding: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    color: #082866;
+}
+
+.volunteer-testimonial {
+    padding-top: 40px;
+    text-align: center;
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+    animation: backgroundChange 9s infinite;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.vol-testimonial {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 9s infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vol-testimonial p {
+    font-size: 1.5rem;
+    color: darkblue;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.vol-testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: darkcyan;
+}
+
+/* Keyframes for sliding and background change */
+@keyframes backgroundChange {
+    0%, 33.33% { background: linear-gradient(180deg, #98D7F3 22.6%, #99EDED 48.11%, #B7CBFF 100%); }
+    33.34%, 66.66% { background: linear-gradient(180deg, #a8edea 0%, #fed6e3 100%); }
+    66.67%, 100% { background: linear-gradient(180deg, #84fab0 0%, #8fd3f4 100%); }
+}
+
+@keyframes fadeIn {
+    0%, 33.33% { opacity: 0; }
+    33.34%, 66.66% { opacity: 1; }
+    66.67%, 100% { opacity: 0; }
+}
+.vol-testimonial:nth-child(1) {
+    animation-delay: 0s;
+}
+.vol-testimonial:nth-child(2) {
+    animation-delay: 3s;
+}
+.vol-testimonial:nth-child(3) {
+    animation-delay: 6s;
+}
+
+/* Media Queries for Tablets (768px) */
+@media (max-width: 768px) {
+    .intro {
+        height: 440px;
+    }
+    .belt-track img {
+        width: 200px;
+    }
+
+    .intro-title {
+        font-size: 24px;
+    }
+
+    .intro-subtext {
+        font-size: 14px;
+    }
+
+    .explain {
+        width: 80%;
+    }
+
+    .card-item {
+        padding: 5px;
+        width: 150px;
+    }
+    .volunteer-testimonial {
+        height: 250px;
+    }
+    .vol-testimonial {
+        top: 80px;
+    }
+    .vol-testimonial p {
+        font-size: 1rem;
+    }
+    .vol-testimonial span {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries for Phones (480px) */
+@media (max-width: 480px) {
+    .belt-track img {
+        width: 85px;
+    }
+    .intro-volunteer {
+        padding: 30px;
+    }
+
+    .intro-title {
+        font-size: 20px;
+    }
+
+    .intro-subtext {
+        font-size: 12px;
+    }
+
+    .explain-inner img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-item {
+        padding: 10px;
+    }
+
+    .card-item h2 {
+        font-size: 1rem;
+    }
+
+    .card-item p {
+        font-size: 0.8rem;
+    }
+    .volunteer-testimonial {
+        height: 250px;
+    }
+    .vol-testimonial {
+        top: 85px;
+    }
+    .vol-testimonial p {
+        font-size: 0.9rem;
+    }
+    .vol-testimonial span {
+        font-size: 0.8rem;
+    }
+}

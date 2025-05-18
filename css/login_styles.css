@@ -1,0 +1,195 @@
+/* Center the login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 89vh;
+    width: 100%;
+    margin: auto;
+    background: linear-gradient(to right, #4c83e2, white, #4c83e2); /* Gradient background */
+}
+
+/* Center the login content */
+.login-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-column-gap: 20px;
+    justify-content: center; /* Center the columns */
+}
+
+/* Add 3D effect to the logo */
+.logo-image {
+    border-radius: 30px;
+    width: 430px;
+    height: 430px;
+    object-fit: contain;
+    padding-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    transform: perspective(1000px) rotateY(10deg);
+}
+
+/* Floating animation for the logo */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.logo-image {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Slide in animation for the form */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.form-login {
+    background-color: #89bffa; /* Darker blue */
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px; /* Match the size of the logo */
+    height: 400px; /* Match the size of the logo */
+    margin: 20px;
+    overflow: auto;
+    animation: slideIn 1s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    border-top-left-radius: 50px; /* Arc border at the top */
+    border-top-right-radius: 50px; /* Arc border at the top */
+    border-bottom-left-radius: 50px; /* Arc border at the bottom */
+    border-bottom-right-radius: 50px; /* Arc border at the bottom */
+}
+
+/* Button styles */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message styles */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
+
+/* Increase the size of the "Login" text */
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+/* For Tablets (widths between 600px and 1024px) */
+@media only screen and (max-width: 1024px) {
+    .login-content {
+        grid-template-columns: 1fr; /* Stack the columns vertically */
+        justify-content: center;
+        grid-column-gap: 0; /* Remove the gap between columns */
+        text-align: center;
+
+    }
+
+    .floating-cloud{
+        padding-top: 100px;
+    }
+
+    .logo-image {
+        width: 230px; /* Reduce the size of the logo */
+        height: 230px;
+    }
+
+    .form-login {
+        width: 400px; /* Adjust the form size */
+        height: 300px;
+        font-size: 0.9rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* Adjust font size for headings */
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Reduce button padding for smaller screens */
+    button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+}
+
+/* For Phones (widths below 600px) */
+@media only screen and (max-width: 600px) {
+    .login-container {
+        height: auto; /* Allow the container height to be flexible */
+    
+    }
+
+    .floating-cloud{
+        padding-top: 80px;
+    }
+
+    .login-content {
+        grid-template-columns: 1fr; /* Stack the logo and form vertically */
+        text-align: center; /* Center-align the content */
+    }
+
+    .logo-image {
+        width: 200px; /* Further reduce the logo size */
+        height: 200px;
+    }
+
+    .form-login {
+        width: 380px; /* Further adjust the form size */
+        height: auto; /* Let the height be auto */
+        padding: 15px; /* Add padding */
+        margin: 10px; /* Reduce margin */
+        font-size: 0.9rem;
+    }
+
+    /* Adjust font size for headings */
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Reduce button size for small screens */
+    button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust input fields */
+    input[type="email"], input[type="password"] {
+        padding: 6px;
+        font-size: 1rem;
+    }
+}
+
+
+
+

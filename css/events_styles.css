@@ -1,0 +1,380 @@
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    background: linear-gradient(135deg, #6ec1e4, #007bff);
+    color: white;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+}
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; /* Margin around the search bar */
+    padding: 15px; /* Padding inside the search bar */
+    background-color: #fff; /* White background for the search bar */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Input Field */
+.search-label {
+    margin-right: 10px; /* Space between label and input */
+    font-weight: 600; /* Bold label */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5; /* Light gray background for input */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px; /* Padding inside the input group */
+    border: 1px solid #ccc; /* Light border */
+}
+
+.input-group i {
+    margin-right: 10px; /* Space between icon and input */
+    color: #888; /* Gray icon color */
+}
+
+.search-input-wrapper input {
+    border: none; /* No border for input */
+    background: transparent; /* Transparent background */
+    padding: 10px; /* Padding inside the input */
+    width: 250px; /* Fixed width for input */
+    outline: none; /* Remove outline */
+}
+
+.search-button,
+.filter-button {
+    background-color: transparent; /* Transparent button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button font size */
+    margin-left: 10px; /* Space between buttons */
+}
+
+/* Results and Pagination Section */
+.results-and-pagination {
+    display: flex;
+    align-items: center; /* Center elements vertically */
+}
+
+.results-per-page select {
+    padding: 8px 12px; /* Padding for the select box */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    margin-right: 20px; /* Space to the right */
+}
+
+.pagination {
+    display: flex;
+    align-items: center; /* Center elements vertically */
+}
+
+/* Pagination Buttons */
+.pagination-button {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    margin: 0 5px; /* Space between buttons */
+}
+
+.pagination-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+.pagination-button:disabled {
+    background-color: #ccc; /* Gray background for disabled state */
+    cursor: not-allowed; /* Not allowed cursor */
+}
+
+/* General Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Hero Section Adjustments for Tablets */
+    .hero-section {
+        padding: 50px 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    /* Search Bar Adjustments */
+    .search-bar {
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        align-items: center; /* Stretch to fit the container */
+        padding: 10px; /* Adjust padding */
+        gap: 10px; /* Add spacing between elements */
+    }
+
+    .search-input-wrapper,
+    .results-and-pagination {
+        width: 100%; /* Full width for responsiveness */
+        max-width: 500px; /* Limit maximum width for better centering */
+        margin: 0 auto; /* Center elements horizontally */
+        text-align: center; /* Center text content */
+    }
+
+    .input-group {
+        width: 100%; /* Full width for inputs */
+    }
+
+    .results-per-page,
+    .pagination {
+        width: 100%; /* Full width */
+        max-width: 500px; /* Limit max width */
+        margin: 0 auto; /* Center elements horizontally */
+        text-align: center; /* Center-align content */
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center; /* Center-align buttons */
+        gap: 10px; /* Space between pagination buttons */
+    }
+
+    .pagination-button {
+        padding: 8px 12px; /* Adjust button size */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .results-per-page {
+        margin-bottom: 10px; /* Add spacing below dropdown */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for small screens (phones) */
+    .hero-section {
+        padding: 30px 5px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+    }
+
+    .search-bar {
+        padding: 10px; /* Adjust padding */
+        text-align: center; /* Center text */
+        gap: 10px; /* Increase spacing between elements */
+    }
+
+    .input-group {
+        padding: 5px; /* Adjust padding for input */
+    }
+
+    .search-input-wrapper input {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .search-input-wrapper,
+    .results-and-pagination {
+        width: 100%; /* Full width for responsiveness */
+        max-width: 400px; /* Limit maximum width for smaller screens */
+        margin: 0 auto; /* Center elements */
+    }
+
+    .results-per-page select {
+        width: 100%; /* Full width for dropdown */
+    }
+
+    .pagination {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center-align buttons */
+        gap: 5px; /* Spacing between buttons */
+    }
+
+    .pagination-button {
+        padding: 8px 10px; /* Adjust button size */
+        font-size: 12px; /* Reduce font size */
+    }
+}
+
+/* Add Label to Results Dropdown */
+.results-per-page label {
+    font-size: 14px; /* Label font size */
+    font-weight: 600; /* Bold label */
+    margin-right: 8px; /* Space between label and dropdown */
+    color: #555; /* Neutral color for label */
+}
+
+.results-per-page {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between label and dropdown */
+}
+
+/* Events Section */
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the events section */
+}
+
+/* Event Card Styles */
+.event-card {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    background-color: #fff; /* White background */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.event-card:hover {
+    transform: translateY(-5px); /* Raise the card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Event Image */
+.event-image {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    background-color: #cce5ff; /* Light blue background */
+    background-size: cover; /* Cover image */
+    background-position: center; /* Center image */
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%; /* Make the image take up full width */
+    height: 100%; /* Make the image take up full height */
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: center; /* Center the image */
+}
+
+/* Event Details */
+.event-details {
+    padding: 10px; /* Padding inside event details */
+    flex-grow: 1; /* Allow to fill remaining space */
+    background-color: rgba(255, 255, 255, 1); /* White overlay with 80% opacity */
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+}
+
+.event-details h2 {
+    font-size: 1.5em; /* Large font size for title */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.event-details p {
+    margin-bottom: 10px; /* Space below paragraph */
+}
+
+/* Explore More Button */
+.explore-button {
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    align-self: flex-start; /* Align to the start of the card */
+}
+
+.explore-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Events Section for Tablets */
+    .events {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller cards for tablets */
+        gap: 15px; /* Reduce gap between cards */
+        padding: 15px; /* Reduce padding */
+    }
+
+    /* Event Card */
+    .event-card {
+        padding: 10px; /* Reduce padding for cards */
+    }
+
+    /* Event Image */
+    .event-image {
+        height: 180px; /* Smaller image height for tablets */
+    }
+
+    /* Event Details */
+    .event-details h2 {
+        font-size: 1.3em; /* Slightly smaller title font */
+    }
+
+    .event-details p {
+        font-size: 0.9em; /* Slightly smaller paragraph font */
+    }
+
+    /* Explore Button */
+    .explore-button {
+        padding: 8px 12px; /* Reduce button size */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Events Section for Phones */
+    .events {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller cards for phones */
+        gap: 10px; /* Reduce gap between cards */
+        padding: 10px; /* Reduce padding */
+    }
+
+    /* Event Card */
+    .event-card {
+        padding: 8px; /* Reduce padding for cards */
+    }
+
+    /* Event Image */
+    .event-image {
+        height: 150px; /* Smaller image height for phones */
+    }
+
+    /* Event Details */
+    .event-details h2 {
+        font-size: 1.2em; /* Smaller title font */
+    }
+
+    .event-details p {
+        font-size: 0.85em; /* Smaller paragraph font */
+    }
+
+    /* Explore Button */
+    .explore-button {
+        padding: 6px 10px; /* Reduce button size further */
+        font-size: 12px; /* Smaller font size for the button */
+    }
+}

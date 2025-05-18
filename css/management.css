@@ -1,0 +1,736 @@
+/* Hero Section */
+.hero-section {
+    padding-top: 70px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    animation: gradientAnimation 15s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text-box {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for the text box */
+    padding: 20px 30px; /* Padding inside the text box */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Hero text */
+.hero-section h1 {
+    font-size: 2.5rem; /* Original size */
+    color: #2c3e50;
+}
+
+.hero-section p {
+    font-size: 1.2rem; /* Original size */
+    color: #042d30;
+    font-style: italic;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, #3498db, white);
+    }
+    20% {
+        background: linear-gradient(45deg, white, #2ecc71);
+    }
+    40% {
+        background: linear-gradient(45deg, #9b59b6, white);
+    }
+    60% {
+        background: linear-gradient(45deg, white, #3498db);
+    }
+    80% {
+        background: linear-gradient(45deg, #2ecc71, white);
+    }
+    100% {
+        background: linear-gradient(45deg, white, #9b59b6);
+    }
+}
+
+.hero-section {
+    transition: background 3s ease-in-out; /* Smooth transition */
+}
+
+/* Sort By Dropdown with Logo */
+.sort-by {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.sort-label i {
+    margin-right: 5px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center; /* Center elements vertically */
+}
+
+/* Tabs - Folder Style */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #ecf0f1;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+.tab-button {
+    position: relative;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    margin-right: -5px; /* Overlap effect */
+    z-index: 1;
+    border-bottom: none; /* Hide bottom border for active effect */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: background-color 0.3s;
+}
+.tab-button.active {
+    background-color: #3498db;
+    color: white;
+    z-index: 2;
+    font-weight: bold;
+}
+.tabs::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #3498db; /* Underline bar color */
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Event List Section */
+.event-section {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+.create-event-btn {
+    float: right;
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.create-event-btn:hover {
+    background-color: #16a085;
+}
+
+/* Event Table */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.event-table th, .event-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.event-table th {
+    background-color: #1abc9c;
+    color: #fff;
+    text-align: left;
+}
+
+.event-table td {
+    background-color: #e7f5f2; /* Light green cells */
+}
+
+.event-table tr:nth-child(even) {
+    background-color: #c8e6e8; /* Alternate row color */
+}
+
+.event-table tr:hover {
+    background-color: #d1c4e9; /* Light purple hover */
+}
+
+.event-table-image {
+    width: 50px;
+    height: auto;
+}
+
+.event-actions button {
+    margin-right: 5px;
+}
+
+/* Hover effects for table rows */
+.event-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Event Actions */
+.event-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.event-actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: color 0.3s;
+}
+
+/* Buttons */
+.create-event-btn {
+    float: right;
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-event-btn:hover {
+    background-color: #16a085;
+}
+
+/* General Styles for Action Buttons */
+.edit-btn, .delete-btn, .view-btn  {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 0.9em; /* Adjust size as needed */
+    margin-right: 15px; /* Spacing between buttons */
+}
+
+/* Individual Button Colors */
+.edit-btn {
+    color: #3498db; /* Blue */
+}
+
+.edit-btn:hover {
+    color: #2980b9; /* Darker blue on hover */
+}
+
+.delete-btn {
+    color: purple; /* Red */
+}
+
+.delete-btn:hover {
+    color: darkorchid; /* Darker red on hover */
+}
+
+.view-btn {
+    color: #1abc9c; /* Green */
+}
+
+.view-btn:hover {
+    color: #16a085; /* Darker green on hover */
+}
+
+/* Modal (Create Event) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Make the modal scrollable */
+    z-index: 1000;
+}
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;
+    max-height: 90vh; /* Maximum height to fit within the viewport */
+    overflow-y: auto; 
+    position: relative;
+    z-index: 1001;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #e74c3c;
+}
+.close-btn:hover {
+    color: #c0392b;
+}
+.submit-btn {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+.submit-btn:hover {
+    background-color: #16a085;
+}
+
+.modal-content {
+    display: flex;
+    width: 800px;
+}
+.modal-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.modal-right {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    margin-top: 50px;
+}
+.modal-right img {
+    width: 250px;
+    height: 350px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.placeholder {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    background: rgba(200, 200, 200, 0.5);
+    color: #666;
+    font-size: 14px;
+    font-style: italic;
+    z-index: 1;
+}
+
+#eventImagePreview {
+    position: relative;
+    z-index: 2; /* Ensures the image is above the placeholder */
+}
+.registered-names {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+.registered-names ul {
+    list-style: none;
+}
+.registered-names ul li {
+    padding: 5px 0;
+}
+
+.modal-right img {
+    width: 300px;       /* Allow the width to adjust automatically */
+    height: 400px;      /* Allow the height to adjust automatically */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a subtle 3D effect */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; /* Margin around the search bar */
+    padding: 15px; /* Padding inside the search bar */
+    background-color: #fff; /* White background for the search bar */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Input Field */
+.search-label {
+    margin-right: 10px; /* Space between label and input */
+    font-weight: 600; /* Bold label */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5; /* Light gray background for input */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px; /* Padding inside the input group */
+    border: 1px solid #ccc; /* Light border */
+}
+
+.input-group i {
+    margin-right: 10px; /* Space between icon and input */
+    color: #888; /* Gray icon color */
+}
+
+.search-input-wrapper input {
+    border: none; /* No border for input */
+    background: transparent; /* Transparent background */
+    padding: 10px; /* Padding inside the input */
+    width: 250px; /* Fixed width for input */
+    outline: none; /* Remove outline */
+}
+
+.search-button,
+.filter-button {
+    background-color: transparent; /* Transparent button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button font size */
+    margin-left: 10px; /* Space between buttons */
+}
+
+/* Results and Pagination Section */
+.results-and-pagination {
+    display: flex;
+    align-items: center; /* Center elements vertically */
+}
+
+.results-per-page select {
+    padding: 8px 12px; /* Padding for the select box */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    margin-right: 20px; /* Space to the right */
+}
+
+.pagination {
+    display: flex;
+    align-items: center; /* Center elements vertically */
+}
+
+/* Pagination Buttons */
+.pagination-button {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    margin: 0 5px; /* Space between buttons */
+}
+
+.pagination-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+.pagination-button:disabled {
+    background-color: #ccc; /* Gray background for disabled state */
+    cursor: not-allowed; /* Not allowed cursor */
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-section {
+        padding-top: 50px;
+        height: 250px;
+    }
+    .hero-text-box {
+        padding: 15px 20px;
+    }
+    .hero-section h1 {
+        font-size: 2rem; /* Smaller font size for h1 */
+    }
+    .hero-section p {
+        font-size: 1rem; /* Smaller font size for paragraph */
+    }
+
+    /* Sort By Dropdown */
+    .sort-by {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 15px;
+    }
+
+    .sort-label {
+        padding-left: 15px;
+    }
+
+    .pagination {
+        flex-direction: column;
+    }
+
+    /* Tabs - Folder Style */
+    .tabs {
+        flex-direction: row;
+    }
+
+    .tab-button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Event Table */
+    .event-table {
+        font-size: 0.9rem; /* Smaller text in the table */
+    }
+
+    .event-table th, .event-table td {
+        padding: 6px;
+    }
+
+    /* Modal (Create Event) */
+    .modal-content {
+        width: 90%;
+        max-height: 80vh; /* Adjust height for smaller screens */
+    }
+
+    .modal-left, .modal-right {
+        padding: 15px;
+    }
+
+    .modal-right img {
+        width: 200px;
+        height: 300px;
+    }
+
+    /* Search Bar Adjustments */
+    .search-bar {
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        align-items: center; /* Stretch to fit the container */
+        padding: 10px; /* Adjust padding */
+        gap: 10px; /* Add spacing between elements */
+    }
+
+    .search-input-wrapper,
+    .results-and-pagination {
+        width: 100%; /* Full width for responsiveness */
+        max-width: 500px; /* Limit maximum width for better centering */
+        margin: 0 auto; /* Center elements horizontally */
+        text-align: center; /* Center text content */
+    }
+
+    .input-group {
+        width: 100%; /* Full width for inputs */
+    }
+
+    .results-per-page,
+    .pagination {
+        width: 100%; /* Full width */
+        max-width: 500px; /* Limit max width */
+        margin: 0 auto; /* Center elements horizontally */
+        text-align: center; /* Center-align content */
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center; /* Center-align buttons */
+        gap: 10px; /* Space between pagination buttons */
+    }
+
+    .pagination-button {
+        padding: 8px 12px; /* Adjust button size */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .results-per-page {
+        margin-bottom: 10px; /* Add spacing below dropdown */
+    }
+}
+
+/* Phone (480px) */
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero-section {
+        padding-top: 60px;
+        height: 200px;
+    }
+    .hero-text-box {
+        padding: 10px 15px;
+    }
+    .hero-section h1 {
+        font-size: 1.5rem; /* Smaller font size for h1 */
+    }
+    .hero-section p {
+        font-size: 0.9rem; /* Smaller font size for paragraph */
+    }
+
+    /* Sort By Dropdown */
+    .sort-by {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sort-label {
+        padding-left: 0;
+    }
+
+    .pagination {
+        flex-direction: column;
+    }
+
+    /* Tabs - Folder Style */
+    .tabs {
+        flex-direction: row;
+    }
+
+    .tab-button {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+
+    /* Event Table */
+    .event-table {
+        font-size: 0.8rem; /* Smaller text in the table */
+    }
+
+    .event-table th, .event-table td {
+        padding: 4px;
+    }
+
+    /* Modal (Create Event) */
+    .modal-content {
+        width: 90%;
+        max-height: 70vh; /* Ensure it doesn't exceed viewport height */
+        display: flex; /* Keep content in a row layout */
+        flex-direction: row; /* Align elements horizontally */
+        justify-content: space-between; /* Add spacing between left and right sections */
+        align-items: flex-start; /* Align sections at the top */
+        overflow-y: auto; /* Allow scrolling for content overflow */
+        padding: 10px; /* Add breathing space */
+    }
+    /* Left section adjustments */
+    .modal-left {
+        flex: 1; /* Take up available space */
+        padding: 10px;
+        overflow-y: auto; /* Allow scrolling if content exceeds height */
+        box-sizing: border-box;
+    }
+    /* Right section adjustments */
+    .modal-right {
+        flex: 0 0 30%; /* Ensure the right section takes 30% of the width */
+        padding: 10px;
+        display: flex;
+        flex-direction: column; /* Allow stacking within the right section */
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        max-width: 200px; /* Prevent it from becoming too wide on larger screens */
+        margin-top: 20px; /* Add spacing to lower the section */
+        position: relative; /* Ensure it can be moved without affecting the flow */
+        top: 90px; 
+    }
+    /* Image adjustments */
+    .modal-right img {
+        width: 100%; /* Let the image fill the container */
+        max-width: 200px; /* Ensure the image isn't too large */
+        height: auto; /* Maintain aspect ratio */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    /* Placeholder adjustments */
+    .placeholder {
+        width: 100%; /* Match the size of the image container */
+        max-width: 200px;
+        height: auto;
+        font-size: 12px; /* Adjust font size for readability */
+        text-align: center;
+    }
+    /* Registered names section */
+    .registered-names {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%; /* Ensure it spans the modal's width */
+        box-sizing: border-box;
+    }
+    .registered-names ul li {
+        padding: 3px 0;
+    }
+    /* .modal-left, .modal-right {
+        padding: 10px;
+    }
+
+    .modal-right img {
+        width: 180px;
+        height: 270px;
+    } */
+
+    /* Sort By Dropdown */
+    .sort-by {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+    }
+
+    .sort-label {
+        padding-left: 10px;
+    }
+
+    .search-bar {
+        padding: 10px; /* Adjust padding */
+        text-align: center; /* Center text */
+        gap: 10px; /* Increase spacing between elements */
+        flex-direction: column;
+    }
+
+    .input-group {
+        padding: 5px; /* Adjust padding for input */
+    }
+
+    .search-input-wrapper input {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .search-input-wrapper,
+    .results-and-pagination {
+        width: 100%; /* Full width for responsiveness */
+        max-width: 400px; /* Limit maximum width for smaller screens */
+        margin: 0 auto; /* Center elements */
+    }
+
+    .results-per-page select {
+        width: 100%; /* Full width for dropdown */
+    }
+
+    .pagination {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center-align buttons */
+        gap: 5px; /* Spacing between buttons */
+    }
+
+    .pagination-button {
+        padding: 8px 10px; /* Adjust button size */
+        font-size: 12px; /* Reduce font size */
+    }
+}

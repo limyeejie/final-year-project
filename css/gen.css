@@ -1,0 +1,363 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #b39ddb, #64b5f6, #50fa7b); /* Medium gray, blue, and green gradient */
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+}
+
+/* 3D Network Canvas */
+#networkCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;  /* Place canvas below the text */
+    opacity: 2; /* Slight transparency for background */
+}
+
+/* Keyframes for gradient background animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Welcome Text */
+.welcome-text {
+    position: relative;
+    z-index: 2;  /* Place text on top */
+    text-align: center;
+    color: #000;  /* Set all text to black */
+    font-family: 'Arial', sans-serif;
+}
+
+.welcome-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.welcome-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #013220;  /* Use a bright blue */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #2e7d32;
+}
+
+/* Features Section (3D Z-Index Layered Cards) */
+.features-section {
+    padding: 50px 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f4f8, #e3f2fd, #e8f5e9, #f3e5f5); /* Soft gradient background */
+}
+
+/* Title of the features section */
+.features-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.features-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 30px;
+    margin-top: 1px;
+}
+
+/* Flex container for podium effect */
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    perspective: 1200px; /* Apply perspective to give depth */
+}
+
+/* Base styles for each card */
+.feature-card {
+    background-color: #fff;
+    padding: 20px 5px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+    z-index: 0;
+    transform: rotateY(10deg) translateZ(0);
+    will-change: transform, box-shadow; /* For better performance during animation */
+}
+
+/* Podium Layout for varying heights */
+.feature-card:nth-child(3) {
+    width: 240px;
+    height: 190px;
+    background-color: #e3f2fd;
+    transform: rotateY(10deg) translateZ(60px); /* Move this card forward */
+}
+
+.feature-card:nth-child(2),
+.feature-card:nth-child(4) {
+    width: 230px;
+    height: 190px;
+    background-color: #e8f5e9;
+    transform: rotateY(10deg) translateZ(40px); /* Move these cards a bit forward */
+}
+
+.feature-card:nth-child(1),
+.feature-card:nth-child(5) {
+    width: 220px;
+    height: 190px;
+    background-color: #f3e5f5;
+    transform: rotateY(10deg) translateZ(20px); /* Move these cards slightly forward */
+}
+
+/* 3D Hover Effect */
+.feature-card:hover {
+    transform: scale(1.05) rotateY(0deg) translateZ(80px); /* Pull card forward with more depth */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 255, 183, 0.6); /* Neon shadow */
+    z-index: 2;
+}
+
+/* Specific neon colors on hover */
+.feature-card:nth-child(1):hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 25px rgba(224, 64, 251, 0.6); /* Neon purple */
+}
+
+.feature-card:nth-child(2):hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 25px rgba(0, 255, 183, 0.6); /* Neon green */
+}
+
+.feature-card:nth-child(3):hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 25px rgba(30, 144, 255, 0.6); /* Neon blue */
+}
+
+.feature-card:nth-child(4):hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 25px rgba(124, 252, 0, 0.6); /* Neon light green */
+}
+
+.feature-card:nth-child(5):hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 25px rgba(238, 130, 238, 0.6); /* Neon violet */
+}
+
+/* Headings and text */
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+}
+
+/* 3D Carousel */
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: 0;
+    background: linear-gradient(45deg, #f0f4f8, #e3f2fd, #e8f5e9, #f3e5f5);
+    padding: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 5px;
+  }
+  
+  .swiper {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as per your design */
+    cursor: grab;
+    overflow: hidden;
+  }
+  
+  .camera {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .d-carousel {
+    display: flex;
+    transition: transform 0.3s ease;
+    margin-bottom: 5px;
+  }
+  
+  .d-carousel-item {
+    width: 300px; /* Image width */
+    height: 200px; /* Image height */
+    margin: 0 10px; /* Space between images */
+    object-fit: cover;
+    cursor: grab;
+  }
+  
+  .d-carousel-item:active {
+    cursor: grabbing;
+  }
+
+/* General Styling */
+.text-animation-section {
+    background: linear-gradient(225deg, #b39ddb, #64b5f6, #50fa7b);
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    height: 55vh;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+/* Text Container */
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: nowrap;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Text Item */
+.text-item {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.text-item i {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.text-slide {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Arrow Icons */
+.arrow-icon {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.arrow-icon:hover {
+    opacity: 1;
+}
+
+/* Visible Animation */
+.text-container.show {
+    opacity: 1;
+}
+
+.text-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* General Responsive Design */
+@media (max-width: 768px) { /* Tablet */
+
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 80%;
+        margin-bottom: 20px;
+        transform: none; /* Remove 3D effect for smaller screens */
+    }
+
+    .text-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .arrow-icon {
+        font-size: 2rem;
+        transform: rotate(180deg); /* Change arrow orientation for vertical navigation */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .feature-card {
+        width: 90%;
+        margin-bottom: 20px;
+        transform: none; /* Remove 3D effect for smaller screens */
+    }
+
+    .text-animation-section {
+        height: 105vh;
+    }
+
+    .text-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .double-arrow-icon {
+        font-size: 1.5rem;
+        transform: rotate(90deg); /* Change arrow orientation for vertical navigation */
+    }
+}
+

@@ -1,0 +1,649 @@
+/*services top*/
+.services-top {
+    perspective: 1500px;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(220, 140, 220), white,rgb(220,140,220));
+    transition: background 0.8s ease; 
+    z-index: 1;
+}
+
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 550px;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 5s infinite linear;
+}
+
+.cube__face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg,#32cd99, #ffffff, #32cd99);
+    border: 2px solid #333;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+.cube__face--front img{
+    height:200px;
+    width:200px;
+}
+
+.cube__face--back img{
+    height:200px;
+    width:200px;
+}
+
+.cube__face--left img{
+    height:200px;
+    width:200px;
+}
+
+.cube__face--right img{
+    height:200px;
+    width:200px;
+}
+
+.cube__face--top img{
+    height:200px;
+    width:200px;
+}
+
+.cube__face--bottom img{
+    height:200px;
+    width:200x;
+}
+
+@keyframes rotate {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Left and Right Text Adjustments */
+.left-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.left-text{
+    left:5%;
+}
+
+.right-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.right-text {
+    right: 3%; 
+}
+
+.services-top-title {
+    font-size: 38px; 
+    color: darkblue; 
+    margin-bottom: 10px;
+}
+
+.services-top-subtext {
+    font-size: 20px; 
+    color: darkblue; 
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* AI Insights Section */
+.ai-insights {
+    padding: 20px;
+    text-align: center;
+    background-color: #ede7f6;
+    border-radius: 10px;
+}
+
+.insights-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.insight {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+canvas {
+    width: 100%; /* Ensure canvas resizes with the container */
+    height: auto; /* Maintain aspect ratio of chart */
+}
+
+.insight h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.insight p {
+    font-size: 16px;
+    color: #333;
+}
+
+/*services overview*/
+.services-overview {
+    background-color: #030172;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; 
+    height: 450px;
+}
+
+.services-overview h1{
+    color: white;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    animation: badgeSlide 2s ease-in-out; 
+}
+
+.service {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    position: relative; 
+    animation: pulse 2s infinite; 
+}
+
+.service-inner {
+    text-align: center; 
+}
+
+.service p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #000000; 
+}
+
+.service img {
+    width: 100px;
+    height: 100px;
+}
+
+.services-description {
+    font-size: 0.6rem; 
+    font-style: italic; 
+    color: #555; 
+    margin-top: 5px; 
+    word-wrap: break-word; 
+    white-space: normal;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* How It Works Section */
+.how-it-works-services {
+    background-color: #ede7f6; 
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    height: 350px;
+}
+
+.how-it-works-services p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.steps-container-services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.step {
+    position: relative;
+    animation: stepSlide 1s ease-in-out forwards; 
+}
+
+.step img {
+    width: 100px;
+    height: 100px;
+}
+
+.step p {
+    font-size: 1.0rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Keep arrows visible */
+.arrow {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #9c27b0; 
+    top: 50%;
+    z-index: -1;
+}
+
+#step1:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #9c27b0; 
+    top: 50%;
+    right: -110px; 
+}
+
+#step2:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #9c27b0;
+    top: 50%;
+    left: -110px; 
+}
+
+#step2:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #9c27b0; 
+    top: 50%;
+    right: -110px; 
+}
+
+#step3:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #9c27b0; 
+    top: 50%;
+    left: -110px; 
+}
+
+#step3:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #9c27b0; 
+    top: 50%;
+    right: -110px; 
+}
+
+#step4:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #9c27b0; 
+    top: 50%;
+    left: -110px; 
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {  /* Tablet */
+    .services-top {
+        height: 500px; /* Smaller height */
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, rgb(220, 140, 220), white, rgb(220, 140, 220)); 
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    /* Make the cube smaller and adjust the size */
+    .scene {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate 5s infinite linear;
+    }
+
+    /* Adjust cube faces to match smaller size */
+    .cube__face {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Hide text by default */
+    .left-text,
+    .right-text {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* Show text on hover */
+    .services-top:hover .left-text {
+        opacity: 1;
+        visibility: visible;
+        left: 22.5%;
+        background-color: #ffffff;
+        padding-bottom: 30px;
+        text-align: center;
+        width: 400px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        z-index: 3; /* Increase z-index to ensure it's on top */
+        position: absolute; /* Ensure it's positioned correctly */
+        top: 1; /* Position it at the top */
+        animation: alternateText 10s infinite;
+    }
+
+    .services-top:hover .right-text {
+        opacity: 0; /* Set initial opacity to 0 */
+        visibility: hidden; /* Set initial visibility to hidden */
+        right: 17.5%;
+        background-color: #ffffff;
+        padding-bottom: 10px;
+        text-align:center;
+        width: 450px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        z-index: 2; /* Increase z-index to ensure it's on top */
+        position: absolute; /* Ensure it's positioned correctly */
+        bottom: 3; /* Position it at the top */
+        animation: alternateText 10s infinite;
+        animation-delay: 5s;
+    }
+    
+    /* Adjust text styles for smaller screens */
+    .services-top-title {
+        font-size: 28px; 
+        color: darkblue; 
+        margin-bottom: 8px;
+    }
+
+    .services-top-subtext {
+        font-size: 16px; 
+        color: darkblue; 
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+
+    /* Animation to alternate visibility */
+    @keyframes alternateText {
+        0%, 45% {
+            opacity: 1;
+            visibility: visible;
+        }
+        50%, 100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
+
+/* Responsive adjustments for phone-sized screens */
+@media (max-width: 480px) {  /* Phone */
+    .services-top {
+        height: 500px; /* Smaller height */
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, rgb(220, 140, 220), white, rgb(220, 140, 220)); 
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    /* Make the cube smaller and adjust the size */
+    .scene {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate 5s infinite linear;
+    }
+
+    /* Adjust cube faces to match smaller size */
+    .cube__face {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Hide text by default */
+    .left-text,
+    .right-text {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* Show text on hover */
+    .services-top:hover .left-text {
+        opacity: 1;
+        visibility: visible;
+        left: 10%;
+        background-color: #ffffff;
+        padding-bottom: 20px;
+        text-align: center;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        z-index: 3; /* Increase z-index to ensure it's on top */
+        position: absolute; /* Ensure it's positioned correctly */
+        top: 1; /* Position it at the top */
+        animation: alternateText 10s infinite;
+    }
+
+    .services-top:hover .right-text {
+        opacity: 0; /* Set initial opacity to 0 */
+        visibility: hidden; /* Set initial visibility to hidden */
+        right: 10%;
+        background-color: #ffffff;
+        padding-bottom: 20px;
+        text-align:center;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        z-index: 2; /* Increase z-index to ensure it's on top */
+        position: absolute; /* Ensure it's positioned correctly */
+        bottom: 3; /* Position it at the top */
+        animation: alternateText 10s infinite;
+        animation-delay: 5s;
+    }
+    
+    /* Adjust text styles for smaller screens */
+    .services-top-title {
+        font-size: 24px; 
+        color: darkblue; 
+        margin-bottom: 8px;
+    }
+
+    .services-top-subtext {
+        font-size: 14px; 
+        color: darkblue; 
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+
+    /* Animation to alternate visibility */
+    @keyframes alternateText {
+        0%, 45% {
+            opacity: 1;
+            visibility: visible;
+        }
+        50%, 100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
+
+@media (max-width: 768px) {  /* Tablet */
+    .services-overview {
+        padding: 20px;
+        height: auto; /* Adjust height */
+    }
+
+    .services-container {
+        flex-direction: column; /* Stack the services vertically */
+        gap: 20px;
+    }
+
+    .service {
+        margin-bottom: 15px; /* Space between services */
+    }
+
+    .service img {
+        width: 100px; /* Smaller images */
+        height: 80px;
+    }
+
+    .services-description {
+        font-size: 0.9rem; /* Slightly larger font for readability */
+    }
+
+    .service p {
+        font-size: 1rem; /* Adjust text size */
+    }
+}
+
+@media (max-width: 480px) { /* Phone */
+    .services-overview {
+        padding: 10px;
+    }
+
+    .services-container {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center-align */
+    }
+
+    .service {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .service img {
+        width: 60px; /* Further reduce size */
+        height: 60px;
+    }
+
+    .service p {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {  /* Tablet */
+    .how-it-works-services {
+        height: auto; /* Let content grow */
+        padding: 20px;
+    }
+
+    .steps-container-services {
+        flex-direction: column; /* Stack steps vertically */
+        align-items: center; /* Center align */
+    }
+
+    .step {
+        margin-bottom: 20px; /* Space between steps */
+        position: relative; /* Ensure pseudo-elements are positioned relative to the step */
+    }
+
+    .arrow {
+        display: none;  /* Hide arrows */
+    }
+
+    #step1:after, #step2:before, #step2:after, #step3:before, #step3:after, #step4:before {
+        content: '';
+        position: absolute;
+        display: none;  /* Hide arrows */
+    }
+}
+
+@media (max-width: 480px) { /* Phone */
+    .how-it-works-services {
+        padding: 10px;
+    }
+
+    .steps-container-services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        margin-bottom: 10px; /* Reduce space */
+        position: relative; /* Ensure pseudo-elements are positioned relative to the step */
+    }
+
+    .arrow {
+        display: none;  /* Hide arrows */
+    }
+
+    #step1:after, #step2:before, #step2:after, #step3:before, #step3:after, #step4:before {
+        content: '';
+        position: absolute;
+        display: none;  /* Hide arrows */
+    }
+}
+
+
+
+
+

@@ -1,0 +1,76 @@
+body{
+    background: linear-gradient(135deg,  #AED7FF, #81c299, #AED7FF);
+}
+
+.privacy-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg,  #AED7FF, #81c299, #AED7FF);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: black;
+    padding-top: 70px;
+    margin: 0; /* Ensure there's no margin above or below the heading */
+    line-height: 1; /* Tighten line spacing */
+}
+
+.subtitle {
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #555; /* Subtle gray color */
+    margin: 0; /* Remove default margin from the paragraph */
+    padding: 0; /* Remove padding if applied */
+    line-height: 1; /* Ensure consistent line spacing */
+    text-align: center; /* Center-align if necessary */
+    font-style: italic; /* Ensures it's italic */
+}
+
+p {
+    color: black;
+    line-height: 1.6;
+}
+
+/* Media query for tablet (768px) */
+@media (max-width: 768px) {
+    .privacy-container {
+        width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+        padding: 0 5px;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-top: 15px;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+}
+/* Media query for phone (480px) */
+@media (max-width: 480px) {
+    .privacy-container {
+        width: 90%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+}

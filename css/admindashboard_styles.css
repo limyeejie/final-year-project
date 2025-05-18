@@ -1,0 +1,781 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f9;
+    color: #4b4f56;
+    line-height: 1.6;
+    transition: background-color 0.5s ease;
+}
+
+/* Header styling for Admin Dashboard */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%; /**/
+    z-index: 1000;
+    height: 80px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 45px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-container h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation styling */
+.dashboard-header nav {
+    display: flex;
+    align-items: center;
+}
+.dashboard-header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 950px;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+}
+
+.dashboard-header nav ul li {
+    display: inline;
+}
+
+.dashboard-header nav ul li a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-header nav ul li a:hover {
+    background-color: #2563eb;
+}
+.nav-item {
+    margin-left: auto;
+    font-size: 1rem;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Main container styling */
+.dashboard-container {
+    padding: 2.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Welcome section */
+.welcome-section {
+    text-align: center;
+    background-color: #2563eb;
+    padding: 3rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.welcome-section h1 {
+    font-size: 2.8rem;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.generate-report-btn {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.generate-report-btn:hover {
+    background-color: #153e75;
+    transform: translateY(-3px);
+}
+
+/* Overall Performance section */
+.overall-performance {
+    margin-bottom: 3rem;
+}
+
+.overall-performance h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.performance-metrics {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/*.metric-box {
+    background-color: #ffffff;
+    padding: 43px;
+    border-radius: 15px;
+    text-align: center;
+    width: 28%;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.metric-box:hover {
+    transform: translateY(-5px);
+}
+
+.metric-box h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.metric-box p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}*/
+
+.chart-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 28%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.chart-box:hover {
+    transform: translateY(-5px);
+}
+
+.chart-box h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+.chart-box canvas {
+    width: 100%;
+    height: auto;
+}
+
+/* Management Sections (User, Event, Volunteer) */
+.user-management, .event-approval, .volunteer-management {
+    margin-bottom: 3rem;
+}
+
+.user-management h2, .event-approval h2, .volunteer-management h2 {
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.8rem;
+}
+
+.search-bar input {
+    padding: 12px;
+    width: 350px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #2563eb;
+}
+
+.search-bar button {
+    padding: 12px 25px;
+    background-color: #1d4ed8;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #153e75;
+}
+
+.search-bar select {
+    padding: 12px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar select:focus {
+    border-color: #2563eb;
+}
+
+/* Pagination styling */
+.page-counter {
+    font-size: 1rem;
+    margin: 0 15px;
+    color: #1f2937;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 12px 25px;
+    background-color: #1d4ed8;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #153e75;
+}
+
+/* Table styling */
+.table-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    overflow-x: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    border-bottom: 1px solid #eaeaea;
+    text-align: left;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #2563eb;
+    color: white;
+    font-size: 1rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* General Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1100;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    width: 90%; /* Responsive default width */
+    max-width: 500px; /* Maximum width for larger screens */
+    padding: 25px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    max-height: 85vh; /* Prevent content from exceeding viewport height */
+    position: relative;
+    text-align: center; /* Center-align text for a clean design */
+}
+
+/* Modal Header */
+.modal h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1f2937; /* Dark gray for better readability */
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #e5e7eb; /* Subtle separator */
+    padding-bottom: 10px;
+}
+
+/* Labels */
+.modal label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4b5563; /* Neutral gray for text */
+    text-align: left; /* Align labels to the left */
+}
+
+/* Form Inputs */
+.modal input,
+.modal select,
+.modal textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 8px;
+    background-color: #f9fafb; /* Light background */
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus State */
+.modal input:focus,
+.modal select:focus,
+.modal textarea:focus {
+    border-color: #2563eb; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.4); /* Subtle blue glow */
+}
+
+/* Modal Button Container */
+.modal-actions {
+    display: flex;
+    justify-content: center; /* Center-align buttons */
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+/* General Button Styling */
+.modal-actions .btn {
+    padding: 15px 30px; /* Larger padding for bigger buttons */
+    font-size: 1.2rem; /* Larger font size for better readability */
+    font-weight: bold;
+    border-radius: 10px; /* Smooth corners */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center;
+    min-width: 120px; /* Consistent button size */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Add a soft shadow */
+}
+
+/* Save Button */
+.modal-actions .save-btn {
+    background-color: #10b981; /* Green background for save */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.modal-actions .save-btn:hover {
+    background-color: #059669; /* Darker green on hover */
+    transform: translateY(-3px); /* Elevate on hover */
+}
+
+/* Cancel Button */
+.modal-actions .cancel-btn {
+    background-color: #f3f4f6; /* Light gray background */
+    color: #374151; /* Dark gray text */
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.modal-actions .cancel-btn:hover {
+    background-color: #e5e7eb; /* Slightly darker gray on hover */
+    transform: translateY(-3px); /* Elevate on hover */
+}
+
+/* Delete Button */
+.modal-actions .delete-btn {
+    background-color: #ef4444; /* Red background for delete */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.modal-actions .delete-btn:hover {
+    background-color: #dc2626; /* Darker red on hover */
+    transform: translateY(-3px); /* Elevate on hover */
+
+}
+
+/* Scrollbar Styling for Modal Content */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 90%; /* Full width on tablets */
+    }
+
+    .modal h3 {
+        font-size: 1.4rem;
+    }
+
+    .modal-actions .btn {
+        padding: 12px 25px; /* Adjust button padding for smaller screens */
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 95%; /* Almost full width on mobile */
+        padding: 15px;
+    }
+
+    .modal h3 {
+        font-size: 1.2rem;
+    }
+
+    .modal-actions .btn {
+        padding: 10px 20px; /* Smaller padding for mobile */
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+
+/* Footer Section Styling */
+.footer {
+    background-color: #f8f9fa; /* Subtle background color for better contrast */
+    padding: 1.5rem 2rem;
+    color: #4b4f56;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed footer at the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Flex container for footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+/* Footer navigation styling */
+.footer-nav {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav .nav-link {
+    color: #4b4f56;
+    font-size: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-nav .nav-link i {
+    margin-right: 8px;
+}
+
+.footer-nav .nav-link:hover {
+    color: #2563eb;
+}
+
+/* Footer text styling */
+.footer-text {
+    font-size: 0.9rem;
+    color: #4b4f56;
+    margin-left: auto;
+    text-align: right;
+}
+/* Animation effects */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .footer-nav .nav {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+/* Animation effects */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Media query for laptop (1024px) */
+@media (max-width: 1024px) {
+    .dashboard-header {
+        padding: 1rem;
+    }
+    .logo-container h1 {
+        font-size: 1.5rem;
+    }
+    .dashboard-header nav ul {
+        padding-left: 0;
+        gap: 10px;
+        margin-left: 500px;
+    }
+    .performance-metrics {
+        flex-direction: row;
+        gap: 15px;
+    }
+    .metric-box {
+        width: 30%;
+    }
+    .welcome-section h1 {
+        font-size: 2.4rem;
+    }
+    .generate-report-btn {
+        padding: 10px 20px;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .dashboard-header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin-left: 220px;
+    }
+    .nav-item {
+        margin: 0;
+        padding: 0;
+    }
+    .performance-metrics {
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .metric-box {
+        width: 100%;
+        padding: 20px;
+    }
+    .welcome-section h1 {
+        font-size: 2.2rem;
+    }
+    .generate-report-btn {
+        font-size: 0.9rem;
+    }
+    .search-bar {
+        gap: 10px;
+    }
+    .table-container {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .dashboard-header {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+    .logo-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-container img {
+        width: 40px;
+        margin-right: 0;
+    }
+    .logo-container h2 {
+        font-size: 1.4rem;
+    }
+    .dashboard-header nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 45px;
+        align-items: center;
+    }
+    .dashboard-header nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    .welcome-section h1 {
+        font-size: 1.8rem;
+    }
+    .generate-report-btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    .performance-metrics {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .chart-box {
+        width: 95%;
+    }
+    .metric-box {
+        width: 100%;
+        padding: 15px;
+    }
+    .table-container {
+        padding: 10px;
+    }
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search-bar input, 
+    .search-bar button, 
+    .search-bar select {
+        width: 100%;
+        padding: 10px;
+    }
+    .search-bar button {
+        padding: 10px 20px;
+    }
+}
+@media (max-width: 425px) {
+    .dashboard-header {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 1rem; /* Adds some space between the logo and nav */
+    }
+    .logo-container h2 {
+        font-size: 1.4rem; /* Smaller font size for logo text */
+    }
+    .dashboard-header nav ul {
+        display: flex;
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 8px;
+        padding-left: 0;
+        align-items: center;
+    }
+    .dashboard-header nav ul li a {
+        font-size: 0.9rem; /* Adjusts font size for smaller screens */
+        padding: 8px 12px;
+    }
+    .generate-report-btn {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+    .search-bar {
+        gap: 8px;
+    }
+    .search-bar input,
+    .search-bar button,
+    .search-bar select {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    .search-bar button {
+        padding: 8px 18px;
+    }
+}

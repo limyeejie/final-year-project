@@ -1,0 +1,126 @@
+/* Hero Section */
+.hero-section {
+    padding-top: 70px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    animation: gradientMove 15s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #3498db, #2ecc71);
+    background-size: 200% 200%;
+}
+
+.hero-text-box {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for the text box */
+    padding: 20px 30px; /* Padding inside the text box */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Hero text */
+.hero-section h1 {
+    font-size: 2.5rem; /* Original size */
+    color: #2c3e50;
+}
+
+.hero-section p {
+    font-size: 1.2rem; /* Original size */
+    color: #042d30;
+    font-style: italic;
+}
+
+/* Keyframes for moving gradient */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+}
+
+.hero-section {
+    transition: background 3s ease-in-out; /* Smooth transition */
+}
+
+/* Table Styling */
+.container {
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.event-table th, .event-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.event-table th {
+    background-color: #3498db; /* Blue */
+    color: white;
+}
+
+.event-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.event-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Mark Attendance Button */
+#markAttendanceBtn, #exportBtn {
+    background-color: #8e44ad; /* Purple */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#markAttendanceBtn:hover, #exportBtn:hover {
+    background-color: #6c3483; /* Darker Purple */
+}
+
+/* Pagination Buttons */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #2ecc71; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:disabled {
+    background-color: #bdc3c7; /* Light Grey */
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #27ae60; /* Darker Green */
+}
+
