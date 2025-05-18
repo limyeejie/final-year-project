@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize the generative model
-const genAI = new GoogleGenerativeAI('AIzaSyBFcpPI1BPMe2NsZaskB7A-8WDNxE5ijSQ');
+const genAI = new GoogleGenerativeAI('REMOVED_FOR_SECURITY');
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
   systemInstruction: "Create a clear, helpful chatbot system that answers user questions about SphereConnect’s mission, vision, services, and team. Provide step-by-step guidance for signing up, event participation, data security, password resets, and organizing events. Highlight personalized support, badges, and feedback options while ensuring clarity and accuracy in responses.",
